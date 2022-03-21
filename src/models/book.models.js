@@ -8,7 +8,8 @@ const mongoose= require("mongoose")
 const bookSchema= new mongoose.Schema({
     likes:{type: String, default:0},
     coverImage:{type: String, required:true, unique:true},
-    content:{type:String, required:true}
+    content:{type:String, required:true},
+    publicationId:{type:mongoose.Schema.Types.ObjectId}
 }, {
     versionKey: false,
     timestamps:true
